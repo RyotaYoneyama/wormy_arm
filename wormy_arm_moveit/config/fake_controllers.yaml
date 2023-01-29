@@ -1,0 +1,13 @@
+controller_list:
+  - name: fake_wormy_arm_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - wormy_arm_joint_0
+      - wormy_arm_joint_1
+      - wormy_arm_joint_2
+      - wormy_arm_joint_3
+      - wormy_arm_joint_4
+      - wormy_arm_joint_5
+initial:  # Define initial robot poses.
+  - group: wormy_arm
+    pose: home

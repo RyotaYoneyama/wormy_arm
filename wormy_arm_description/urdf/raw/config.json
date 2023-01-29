@@ -1,0 +1,19 @@
+{
+    "documentId": "3f8fd3cb66199d54e5d8a8ef",
+    "outputFormat": "urdf",
+    "assemblyName": "whole_assembly",
+    "jointMaxEffort": {
+        "default": 1.5,
+        "head_pitch": 0.5
+    },
+    "jointMaxVelocity": 3.14,
+
+    "dynamics": {
+        "base_case": "fixed"
+    },
+    "robotName": "wormy-arm",
+    "addDummyBaseLink": true,
+    "drawCollisions": true,
+    "mergeSTLs": "all",
+    "simplifySTLs": "all"
+}
