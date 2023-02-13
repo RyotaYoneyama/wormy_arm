@@ -201,7 +201,7 @@
             </material>
         </collision>
         <inertial>
-            <origin xyz="1.15284e-18 5.6599e-06 -0.0118831" rpy="0 0 0" />
+            <origin xyz="1.15295e-18 5.6599e-06 -0.0118831" rpy="0 0 0" />
             <mass value="0.0234539" />
             <inertia ixx="5.31243e-06" ixy="-1.55552e-37" ixz="-2.05025e-10" iyy="5.31245e-06"
                 iyz="2.85876e-10" izz="9.79132e-06" />
@@ -264,3 +264,4 @@
 
 
 </robot>
+    

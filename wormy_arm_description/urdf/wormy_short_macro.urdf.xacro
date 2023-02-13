@@ -3,7 +3,7 @@
 
     <xacro:macro name="wormy_short">
     <xacro:property name="pi" value="3.1415" />    
-    
+
     <link name="base_link"></link>
     <joint name="base_link_to_base" type="fixed">
         <parent link="base_link" />
@@ -206,7 +206,7 @@
             </material>
         </collision>
         <inertial>
-            <origin xyz="1.15284e-18 5.6599e-06 -0.0118831" rpy="0 0 0" />
+            <origin xyz="1.15295e-18 5.6599e-06 -0.0118831" rpy="0 0 0" />
             <mass value="0.0234539" />
             <inertia ixx="5.31243e-06" ixy="-1.55552e-37" ixz="-2.05025e-10" iyy="5.31245e-06"
                 iyz="2.85876e-10" izz="9.79132e-06" />
@@ -217,7 +217,7 @@
         <origin xyz="-3.84079e-17 -0.02887 -0.074" rpy="-1.5708 -1.5708 0" />
         <parent link="link_5" />
         <child link="joint_connector_a2" />
-        <axis xyz="0 0 1" />
+        <axis xyz="0 0 -1" />
         <limit lower="-${150/180 * pi}" upper="${150/180 * pi}" effort="1000" velocity="3.14"/>
         <joint_properties friction="0.0" />
     </joint>
@@ -226,7 +226,7 @@
         <origin xyz="5.14996e-17 -0.02887 -0.074" rpy="1.5708 -1.8688e-15 -3.14159" />
         <parent link="link_4" />
         <child link="link_5" />
-        <axis xyz="0 0 1" />
+        <axis xyz="0 0 -1" />
         <limit lower="-${150/180 * pi}" upper="${150/180 * pi}" effort="1000" velocity="3.14"/>
         <joint_properties friction="0.0" />
     </joint>
@@ -235,7 +235,7 @@
         <origin xyz="-1.89464e-17 -0.02887 -0.074" rpy="1.5708 -7.72906e-16 3.14159" />
         <parent link="link_3" />
         <child link="link_4" />
-        <axis xyz="0 0 1" />
+        <axis xyz="0 0 -1" />
         <limit lower="-${150/180 * pi}" upper="${150/180 * pi}" effort="1000" velocity="3.14"/>
         <joint_properties friction="0.0" />
     </joint>
@@ -244,7 +244,7 @@
         <origin xyz="-1.81333e-17 -0.02887 -0.074" rpy="1.5708 -1.66063e-15 -3.14159" />
         <parent link="link_2" />
         <child link="link_3" />
-        <axis xyz="0 0 1" />
+        <axis xyz="0 0 -1" />
         <limit lower="-${150/180 * pi}" upper="${150/180 * pi}" effort="1000" velocity="3.14"/>
         <joint_properties friction="0.0" />
     </joint>
@@ -253,7 +253,7 @@
         <origin xyz="2.36004e-16 -0.02887 -0.074" rpy="1.5708 6.77541e-16 3.14159" />
         <parent link="link_1" />
         <child link="link_2" />
-        <axis xyz="0 0 1" />
+        <axis xyz="0 0 -1" />
         <limit lower="-${150/180 * pi}" upper="${150/180 * pi}" effort="1000" velocity="3.14"/>
         <joint_properties friction="0.0" />
     </joint>
@@ -262,12 +262,10 @@
         <origin xyz="-0.00020294 0.000945844 0.08702" rpy="-3.14159 -4.31408e-32 -3.14159" />
         <parent link="link_0" />
         <child link="link_1" />
-        <axis xyz="0 0 1" />
+        <axis xyz="0 0 -1" />
         <limit lower="-${150/180 * pi}" upper="${150/180 * pi}" effort="1000" velocity="3.14"/>
         <joint_properties friction="0.0" />
     </joint>
-
-
 
     <transmission name="trans_joint_5">
         <type>transmission_interface/SimpleTransmission</type>
