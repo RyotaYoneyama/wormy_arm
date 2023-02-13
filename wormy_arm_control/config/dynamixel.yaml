@@ -1,0 +1,19 @@
+port_name: /dev/ttyUSB0
+baud_rate: 1000000
+timeout_seconds: 10
+read_velocities: True
+read_loads: True
+read_temperatures: True
+joints:
+  joint_0:
+    ID: 0
+  joint_1:
+    ID: 1
+  joint_2:
+    ID: 2
+  joint_3:
+    ID: 3
+  joint_4:
+    ID: 4
+  joint_5:
+    ID: 5

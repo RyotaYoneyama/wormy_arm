@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>wormy_arm_control</name>
+  <version>0.0.0</version>
+  <description>The wormy_arm_control package</description>
+
+  <maintainer email="ryota.yoneyama1031@gmail.com">Kenta Yonekura</maintainer>
+
+  <license>BSD</license>
+
+  <author email="davetcoleman@gmail.com">Dave Coleman</author>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>roscpp</depend>
+  <depend>hardware_interface</depend>
+  <depend>transmission_interface</depend>
+  <depend>controller_manager</depend>
+  <depend>dynamixel_sdk</depend>
+
+  <export>
+  </export>
+
+</package>

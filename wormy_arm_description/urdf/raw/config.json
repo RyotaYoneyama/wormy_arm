@@ -1,7 +1,11 @@
 {
+    // "onshape_api": "https://cad.onshape.com",
+    // "onshape_access_key": "63r00Lsm6blJzf5flyLm4rJL",
+    // "onshape_secret_key": "i0630dSFz0nzB3BYHIbvMyOTGHjU87fFDwaJhQXdvEgb3Gcn",
+
     "documentId": "3f8fd3cb66199d54e5d8a8ef",
     "outputFormat": "urdf",
-    "assemblyName": "whole_assembly",
+    "assemblyName": "robot_6dof_short",
     "jointMaxEffort": {
         "default": 1.5,
         "head_pitch": 0.5
@@ -11,9 +15,10 @@
     "dynamics": {
         "base_case": "fixed"
     },
-    "robotName": "wormy-arm",
+    "robotName": "wormy_5dof",
     "addDummyBaseLink": true,
     "drawCollisions": true,
+    "maxSTLSize": 1,
+    // "simplifySTLs": "all",
     "mergeSTLs": "all",
-    "simplifySTLs": "all"
 }

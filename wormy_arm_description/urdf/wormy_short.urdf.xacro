@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="wormy_arm">
+
+
+<!-- wormy_arm -->
+<link name="world_link"/>
+
+<xacro:include filename="$(find wormy_arm_description)/urdf/wormy_short_macro.urdf.xacro"/>
+<xacro:wormy_short />
+
+<link name="floor_link">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="1 1 0.05" />
+      </geometry>
+      <material name="black">
+        <color rgba="0.1 0.1 0.1 2.0"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="1 1 0.05" />
+      </geometry>
+      <material name="black">
+        <color rgba="0.1 0.1 0.1 2.0"/>
+      </material>
+    </collision>
+    <inertial>
+      <mass value="0.1" />
+      <inertia ixx="0.03" iyy="0.03" izz="0.03" ixy="0.0" ixz="0.0" iyz="0.0" />
+    </inertial>
+</link>
+
+<joint name="world2floor_joint" type="fixed">
+    <parent link="world_link" />
+    <child link="floor_link" />
+    <origin rpy="0.0 0 0" xyz="0 0 0.025" />
+</joint>
+
+<joint name="floor2arm_joint" type="fixed">
+    <parent link="floor_link" />
+    <child link="base_link" />
+    <origin rpy="0.0 0 0" xyz="0 0 0.025" />
+</joint>
+
+</robot>

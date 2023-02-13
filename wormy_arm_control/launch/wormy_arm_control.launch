@@ -1,0 +1,24 @@
+<launch>
+
+    <param name="robot_description"
+        command="$(find xacro)/xacro --inorder '$(find wormy_arm_description)/urdf/wormy_short.urdf.xacro'"
+    />
+
+        <rosparam file="$(find wormy_short_moveit)/config/ros_controllers.yaml" command="load" />
+
+
+        <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+            output="screen"
+            args="joint_state_controller arm_controller" />
+
+        <node name="wormy_arm_control" pkg="wormy_arm_control" type="wormy_arm_control"
+            output="screen">
+            <param name="dynamixel_yaml" value="$(find wormy_arm_control)/config/dynamixel.yaml" />
+        </node>
+
+
+        <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+            respawn="false" output="screen">
+        </node>
+
+</launch>

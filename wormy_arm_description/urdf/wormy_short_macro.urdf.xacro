@@ -1,0 +1,335 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro">
+
+    <xacro:macro name="wormy_short">
+    <xacro:property name="pi" value="3.1415" />    
+    
+    <link name="base_link"></link>
+    <joint name="base_link_to_base" type="fixed">
+        <parent link="base_link" />
+        <child link="link_0" />
+        <origin rpy="0.0 0 0" xyz="0 0 0" />
+    </joint>
+    <link name="link_0">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 -0 0" />
+            <geometry>
+                <mesh filename="package://wormy_arm_description/urdf/raw/link_0_visual.stl" />
+            </geometry>
+            <material name="link_0_material">
+                <color rgba="0.817881 0.836208 0.852695 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 -0 0" />
+            <geometry>
+                <mesh filename="package://wormy_arm_description/urdf/raw/link_0_collision.stl" />
+            </geometry>
+            <material name="link_0_material">
+                <color rgba="0.5 0.5 0.5 1.0" />
+            </material>
+        </collision>
+        <inertial>
+            <origin xyz="0.0059763 0.0125469 0.0329924" rpy="0 0 0" />
+            <mass value="0.329343" />
+            <inertia ixx="0.000437093" ixy="-2.32247e-05" ixz="4.16777e-05" iyy="0.000408938"
+                iyz="-9.64991e-06" izz="0.000369942" />
+        </inertial>
+    </link>
+
+    <link name="base">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="1e-9" />
+            <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+        </inertial>
+    </link>
+    <joint name="base_frame" type="fixed">
+        <origin xyz="-1.0842e-19 0 0.001" rpy="0 2.48301e-63 -3.46945e-17" />
+        <parent link="link_0" />
+        <child link="base" />
+        <axis xyz="0 0 0" />
+    </joint>
+
+    <link name="link_1">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 -0 0" />
+            <geometry>
+                <mesh filename="package://wormy_arm_description/urdf/raw/link_1_visual.stl" />
+            </geometry>
+            <material name="link_1_material">
+                <color rgba="0.799704 0.80046 0.803592 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 -0 0" />
+            <geometry>
+                <mesh filename="package://wormy_arm_description/urdf/raw/link_1_collision.stl" />
+            </geometry>
+            <material name="link_1_material">
+                <color rgba="0.5 0.5 0.5 1.0" />
+            </material>
+        </collision>
+        <inertial>
+            <origin xyz="1.21246e-05 -0.00651843 -0.0502915" rpy="0 0 0" />
+            <mass value="0.192291" />
+            <inertia ixx="0.000177516" ixy="1.6057e-08" ixz="7.72555e-09" iyy="0.000164493"
+                iyz="-3.22981e-05" izz="0.000113033" />
+        </inertial>
+    </link>
+
+    <link name="link_2">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 -0 0" />
+            <geometry>
+                <mesh filename="package://wormy_arm_description/urdf/raw/link_2_visual.stl" />
+            </geometry>
+            <material name="link_2_material">
+                <color rgba="0.799704 0.80046 0.803592 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 -0 0" />
+            <geometry>
+                <mesh filename="package://wormy_arm_description/urdf/raw/link_2_collision.stl" />
+            </geometry>
+            <material name="link_2_material">
+                <color rgba="0.5 0.5 0.5 1.0" />
+            </material>
+        </collision>
+        <inertial>
+            <origin xyz="1.21246e-05 -0.00651843 -0.0502915" rpy="0 0 0" />
+            <mass value="0.192291" />
+            <inertia ixx="0.000177516" ixy="1.6057e-08" ixz="7.72555e-09" iyy="0.000164493"
+                iyz="-3.22981e-05" izz="0.000113033" />
+        </inertial>
+    </link>
+
+    <link name="link_3">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 -0 0" />
+            <geometry>
+                <mesh filename="package://wormy_arm_description/urdf/raw/link_3_visual.stl" />
+            </geometry>
+            <material name="link_3_material">
+                <color rgba="0.799704 0.80046 0.803592 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 -0 0" />
+            <geometry>
+                <mesh filename="package://wormy_arm_description/urdf/raw/link_3_collision.stl" />
+            </geometry>
+            <material name="link_3_material">
+                <color rgba="0.5 0.5 0.5 1.0" />
+            </material>
+        </collision>
+        <inertial>
+            <origin xyz="1.21246e-05 -0.00651843 -0.0502915" rpy="0 0 0" />
+            <mass value="0.192291" />
+            <inertia ixx="0.000177516" ixy="1.6057e-08" ixz="7.72555e-09" iyy="0.000164493"
+                iyz="-3.22981e-05" izz="0.000113033" />
+        </inertial>
+    </link>
+
+    <link name="link_4">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 -0 0" />
+            <geometry>
+                <mesh filename="package://wormy_arm_description/urdf/raw/link_4_visual.stl" />
+            </geometry>
+            <material name="link_4_material">
+                <color rgba="0.799704 0.80046 0.803592 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 -0 0" />
+            <geometry>
+                <mesh filename="package://wormy_arm_description/urdf/raw/link_4_collision.stl" />
+            </geometry>
+            <material name="link_4_material">
+                <color rgba="0.5 0.5 0.5 1.0" />
+            </material>
+        </collision>
+        <inertial>
+            <origin xyz="1.21246e-05 -0.00651843 -0.0502915" rpy="0 0 0" />
+            <mass value="0.192291" />
+            <inertia ixx="0.000177516" ixy="1.6057e-08" ixz="7.72555e-09" iyy="0.000164493"
+                iyz="-3.22981e-05" izz="0.000113033" />
+        </inertial>
+    </link>
+
+    <link name="link_5">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 -0 0" />
+            <geometry>
+                <mesh filename="package://wormy_arm_description/urdf/raw/link_5_visual.stl" />
+            </geometry>
+            <material name="link_5_material">
+                <color rgba="0.799704 0.80046 0.803592 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 -0 0" />
+            <geometry>
+                <mesh filename="package://wormy_arm_description/urdf/raw/link_5_collision.stl" />
+            </geometry>
+            <material name="link_5_material">
+                <color rgba="0.5 0.5 0.5 1.0" />
+            </material>
+        </collision>
+        <inertial>
+            <origin xyz="1.21246e-05 -0.00651843 -0.0502915" rpy="0 0 0" />
+            <mass value="0.192291" />
+            <inertia ixx="0.000177516" ixy="1.6057e-08" ixz="7.72555e-09" iyy="0.000164493"
+                iyz="-3.22981e-05" izz="0.000113033" />
+        </inertial>
+    </link>
+
+    <link name="joint_connector_a2">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 -0 0" />
+            <geometry>
+                <mesh filename="package://wormy_arm_description/urdf/raw/joint_connector_a2_visual.stl" />
+            </geometry>
+            <material name="joint_connector_a2_material">
+                <color rgba="0.917647 0.917647 0.917647 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 -0 0" />
+            <geometry>
+                <mesh filename="package://wormy_arm_description/urdf/raw/joint_connector_a2_collision.stl" />
+            </geometry>
+            <material name="joint_connector_a2_material">
+                <color rgba="0.5 0.5 0.5 1.0" />
+            </material>
+        </collision>
+        <inertial>
+            <origin xyz="1.15284e-18 5.6599e-06 -0.0118831" rpy="0 0 0" />
+            <mass value="0.0234539" />
+            <inertia ixx="5.31243e-06" ixy="-1.55552e-37" ixz="-2.05025e-10" iyy="5.31245e-06"
+                iyz="2.85876e-10" izz="9.79132e-06" />
+        </inertial>
+    </link>
+
+    <joint name="joint_5" type="revolute">
+        <origin xyz="-3.84079e-17 -0.02887 -0.074" rpy="-1.5708 -1.5708 0" />
+        <parent link="link_5" />
+        <child link="joint_connector_a2" />
+        <axis xyz="0 0 1" />
+        <limit lower="-${150/180 * pi}" upper="${150/180 * pi}" effort="1000" velocity="3.14"/>
+        <joint_properties friction="0.0" />
+    </joint>
+
+    <joint name="joint_4" type="revolute">
+        <origin xyz="5.14996e-17 -0.02887 -0.074" rpy="1.5708 -1.8688e-15 -3.14159" />
+        <parent link="link_4" />
+        <child link="link_5" />
+        <axis xyz="0 0 1" />
+        <limit lower="-${150/180 * pi}" upper="${150/180 * pi}" effort="1000" velocity="3.14"/>
+        <joint_properties friction="0.0" />
+    </joint>
+
+    <joint name="joint_3" type="revolute">
+        <origin xyz="-1.89464e-17 -0.02887 -0.074" rpy="1.5708 -7.72906e-16 3.14159" />
+        <parent link="link_3" />
+        <child link="link_4" />
+        <axis xyz="0 0 1" />
+        <limit lower="-${150/180 * pi}" upper="${150/180 * pi}" effort="1000" velocity="3.14"/>
+        <joint_properties friction="0.0" />
+    </joint>
+
+    <joint name="joint_2" type="revolute">
+        <origin xyz="-1.81333e-17 -0.02887 -0.074" rpy="1.5708 -1.66063e-15 -3.14159" />
+        <parent link="link_2" />
+        <child link="link_3" />
+        <axis xyz="0 0 1" />
+        <limit lower="-${150/180 * pi}" upper="${150/180 * pi}" effort="1000" velocity="3.14"/>
+        <joint_properties friction="0.0" />
+    </joint>
+
+    <joint name="joint_1" type="revolute">
+        <origin xyz="2.36004e-16 -0.02887 -0.074" rpy="1.5708 6.77541e-16 3.14159" />
+        <parent link="link_1" />
+        <child link="link_2" />
+        <axis xyz="0 0 1" />
+        <limit lower="-${150/180 * pi}" upper="${150/180 * pi}" effort="1000" velocity="3.14"/>
+        <joint_properties friction="0.0" />
+    </joint>
+
+    <joint name="joint_0" type="revolute">
+        <origin xyz="-0.00020294 0.000945844 0.08702" rpy="-3.14159 -4.31408e-32 -3.14159" />
+        <parent link="link_0" />
+        <child link="link_1" />
+        <axis xyz="0 0 1" />
+        <limit lower="-${150/180 * pi}" upper="${150/180 * pi}" effort="1000" velocity="3.14"/>
+        <joint_properties friction="0.0" />
+    </joint>
+
+
+
+    <transmission name="trans_joint_5">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_5">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_5_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint_4">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_4">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_4_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint_3">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_3">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_3_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint_2">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_2">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_2_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint_1">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_1">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_1_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint_0">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_0">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint_0_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    
+    </xacro:macro>
+</robot>
